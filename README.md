@@ -3,7 +3,6 @@
 ## usersテーブル
 |Column|Type|Option|Index1|Index2|
 |------|----|------|------|------|
-|id|integer|null: false|●||
 |name|string|null: false||●|
 |email|string|null: false, unique: true|||
 
@@ -15,7 +14,6 @@
 ## groupsテーブル
 |Column|Type|Option|Index1|Index2|
 |------|----|------|------|------|
-|id|integer|null: false|●||
 |name|string|null: false|||
 
 ### Association
@@ -36,7 +34,6 @@
 ## messagesテーブル
 |Column|Type|Option|Index1|Index2|
 |------|----|------|------|------|
-|id|integer|null: false|●||
 |text|text||||
 |image|string||||
 |user_id|integer|null: false, foreign_key: true|||
