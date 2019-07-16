@@ -1,0 +1,40 @@
+.notification
+	グループを作成しました
+.wrapper
+	.side-bar
+		.user-info
+			%p.user-info__username username
+			%ul.user-info__button
+				%li.user-info__button__list
+					= link_to "", class: "user-info__button__list__link" do
+						= icon('fas', 'edit')
+				%li.user-info__button__list
+					= link_to "", class: "user-info__button__list__link" do
+						= icon('fas', 'cog')
+		.chat-groups
+			- (1..10).each do |i|
+				.group
+					%p.group__name groupname#{i}
+					%p.proup__lastmessage lastmessage
+	.main-contents
+		.header
+			%h2.header__groupname groupname
+			.header__member
+				%p.header__member__title Member：
+				%ul.header__member__list
+					- (1..5).each do |i|
+						%li.header__member__list__membername member#{i}
+			= link_to "Edit", "" , class: "header__edit"
+		.messages
+			- (1..10).each do |i|
+				.message
+					.message__title
+						%p.message__title__username testuser#{i}
+						%p.message__title__timestamp 2019/07/13(Sat) 17:30:45
+					%p.message__text testmessage#{i}
+		%form.input-form
+			%input.input-form__input-area{:type => "text", :placeholder => "type a message"}
+			%label.input-form__fileselect-label{:for => "fileselect"}
+				= icon('far', 'image', class: 'fa-lg')
+				%input.input-form__fileselect-original{:type => "file", :id => "fileselect"}
+			%input.input-form__send-button{:type => "submit", :value => "Send"}

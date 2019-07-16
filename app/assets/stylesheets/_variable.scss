@@ -1,0 +1,14 @@
+$color-white: #ffffff;
+$color-skyblue: #38AEF0;
+$color-gray: #eeeeee;
+$color-text-black: #434A54;
+$color-text-gray: #999999;
+$user-info-height: 100px;
+$header-height: 100px;
+$side-bar-width: 300px;
+$notification-height: 25px;
+$form-input-height: 50px;
+$form-border-width-top-and-bottom: 20px;
+$form-border-width-left-and-right: 40px;
+$form-height: calc(#{$form-input-height} + (#{$form-border-width-top-and-bottom} * 2));
+$form-send-button-width: 100px;
