@@ -7,10 +7,10 @@
 			%ul.user-info__button
 				%li.user-info__button__list
 					= link_to "", class: "user-info__button__list__link" do
-						= icon('fas', 'edit')
+						%i.fas.fa-edit
 				%li.user-info__button__list
 					= link_to "", class: "user-info__button__list__link" do
-						= icon('fas', 'cog')
+						%i.fas.fa-cog
 		.chat-groups
 			- (1..10).each do |i|
 				.group
@@ -35,6 +35,6 @@
 		%form.input-form
 			%input.input-form__input-area{:type => "text", :placeholder => "type a message"}
 			%label.input-form__fileselect-label{:for => "fileselect"}
-				= icon('far', 'image', class: 'fa-lg')
+				%i.far.fa-image.fa-lg
 				%input.input-form__fileselect-original{:type => "file", :id => "fileselect"}
 			%input.input-form__send-button{:type => "submit", :value => "Send"}
