@@ -57,3 +57,6 @@ gem "haml-rails"
 
 # devise導入
 gem 'devise'
+
+# デバッグツール
+gem 'pry-rails'
