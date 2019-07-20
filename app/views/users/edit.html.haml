@@ -4,7 +4,7 @@
       %h2 Edit Account
       %h5 アカウントの編集
     .account-page__inner--right.user-form
-      = form_for(@user) do |f|
+      = form_for(current_user) do |f|
         .field
           .field-label
             = f.label :name
