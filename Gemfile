@@ -54,3 +54,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Haml導入
 gem "haml-rails"
+
+# devise導入
+gem 'devise'
+
+# デバッグツール
+gem 'pry-rails'

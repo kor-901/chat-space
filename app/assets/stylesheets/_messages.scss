@@ -3,10 +3,15 @@
 }
 .notification {
 	height: $notification-height;
-	background-color: $color-skyblue;
 	text-align: center;
 	line-height: $notification-height;
 	color: $color-white;
+	&-notice {
+		background-color: $color-skyblue;
+	}
+	&-alert {
+		background-color: $color-orange;
+	}
 }
 .wrapper {
 	width: 100vw;
