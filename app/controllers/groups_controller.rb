@@ -5,7 +5,8 @@ class GroupsController < ApplicationController
 	end
 
 	def create
-		if Group.create(group_params)
+		@group = Group.new(group_params)
+		if @group.save
 			redirect_to root_path
 		else
 			render :new
