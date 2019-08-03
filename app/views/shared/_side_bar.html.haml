@@ -11,6 +11,7 @@
 					%i.fas.fa-cog
 	.chat-groups
 		- current_user.groups.each do |group|
-			.group
-				%p.group__name= group.name
-				%p.group__lastmessage メッセージはまだありません
+			= link_to '', class: "chat-groups__link" do
+				.group
+					%p.group__name= group.name
+					%p.group__lastmessage メッセージはまだありません
