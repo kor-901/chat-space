@@ -11,9 +11,9 @@
 					= link_to edit_user_path(current_user), class: "user-info__button__list__link" do
 						%i.fas.fa-cog
 		.chat-groups
-			- (1..10).each do |i|
+			- @groups.each do |group|
 				.group
-					%p.group__name groupname#{i}
+					%p.group__name= group.name
 					%p.proup__lastmessage lastmessage
 	.main-contents
 		.header
