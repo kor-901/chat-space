@@ -1,21 +1,16 @@
 .chat-group-form
   %h1 新規チャットグループ
-  -# %form#new_chat_group.new_chat_group{"accept-charset": "UTF-8", action: "/chat_groups", method: "post"}
   = form_for(@group, id: "new_chat_group", class: "new_chat_group", "accept-charset": "UTF-8") do |f|
     - if @group.errors.any?
       .chat-group-form__errors
         %h2= "#{@group.errors.full_messages.count}件のエラーが発生しました。"
-        -# 1件のエラーが発生しました。
         %ul
-          -# %li エラーです
           - @group.errors.full_messages.each do |message|
             %li= message
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
-        -# %label.chat-group-form__label{for: "chat_group_name"} グループ名
         = f.label "グループ名", class: "chat-group-form__label", for: "chat_group_name"
       .chat-group-form__field--right
-        -# %input#chat_group_name.chat-group-form__input{name: "chat_group[name]", placeholder: "グループ名を入力してください", type: "text"}/
         = f.text_field :name, placeholder: "グループ名を入力してください", class: "chat-group-form__input", id: "chat_group_name"
     .chat-group-form__field.clearfix
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
@@ -31,11 +26,9 @@
         </div>
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
-        -# %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
         = f.label "チャットメンバー", class: "chat-group-form__label", for: "chat_group_チャットメンバー"
       .chat-group-form__field--right
         = collection_check_boxes :group, :user_ids, User.order("name"), :id, :name
-        / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
         / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
         /
           <div id='chat-group-users'>
@@ -47,5 +40,4 @@
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right
-        -# %input.chat-group-form__action-btn{"data-disable-with": "Save", name: "commit", type: "submit", value: "Save"}/
         = f.submit "Save", class: "chat-group-form__action-btn", "data-disable-with": "Save", name: "commit"
