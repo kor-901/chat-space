@@ -16,7 +16,7 @@
         = f.label "グループ名", class: "chat-group-form__label", for: "chat_group_name"
       .chat-group-form__field--right
         -# %input#chat_group_name.chat-group-form__input{name: "chat_group[name]", placeholder: "グループ名を入力してください", type: "text"}/
-        = f.text_field :name, placeholder: "グループ名を入力してください", class: "chat-group-form__input"
+        = f.text_field :name, placeholder: "グループ名を入力してください", class: "chat-group-form__input", id: "chat_group_name"
     .chat-group-form__field.clearfix
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
