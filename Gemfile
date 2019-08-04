@@ -60,3 +60,6 @@ gem 'devise'
 
 # デバッグツール
 gem 'pry-rails'
+
+# CarrierWave導入
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
