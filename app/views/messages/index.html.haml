@@ -16,7 +16,7 @@
 						%p.message__title__username testuser#{i}
 						%p.message__title__timestamp 2019/07/13(Sat) 17:30:45
 					%p.message__text testmessage#{i}
-		%form.input-form
+		= form_for([@group, Message.new], class: "input-form") do |f|
 			%input.input-form__input-area{:type => "text", :placeholder => "type a message"}
 			%label.input-form__fileselect-label{:for => "fileselect"}
 				%i.far.fa-image.fa-lg
