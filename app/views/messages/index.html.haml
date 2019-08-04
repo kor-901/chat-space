@@ -17,8 +17,8 @@
 						%p.message__title__timestamp 2019/07/13(Sat) 17:30:45
 					%p.message__text testmessage#{i}
 		= form_for [@group, Message.new], html: {class: "input-form"} do |f|
-			%input.input-form__input-area{:type => "text", :placeholder => "type a message"}
-			%label.input-form__fileselect-label{:for => "fileselect"}
+			= f.text_field :text, placeholder: "type a message", class: "input-form__input-area"
+			= f.label :image, class: "input-form__fileselect-label", for: "fileselect" do
 				%i.far.fa-image.fa-lg
-				%input.input-form__fileselect-original{:type => "file", :id => "fileselect"}
-			%input.input-form__send-button{:type => "submit", :value => "Send"}
+				= f.file_field :image, class: "input-form__fileselect-original", id: "fileselect"
+			= f.submit "Send", class: "input-form__send-button", "data-disable-with": "Send", name: "commit"
