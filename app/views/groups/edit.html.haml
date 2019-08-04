@@ -26,6 +26,8 @@
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         = f.label "チャットメンバー", class: "chat-group-form__label", for: "chat_group_チャットメンバー"
+      .chat-group-form__field--right
+        = collection_check_boxes :group, :user_ids, User.order("name"), :id, :name
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right
