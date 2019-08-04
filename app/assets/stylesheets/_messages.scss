@@ -34,7 +34,7 @@
 				&__list {
 					display: inline-block;
 					&__link {
-						color: white;
+						color: $color-white;
 					}
 				}
 			}
@@ -45,8 +45,11 @@
 			overflow: auto;
 			padding: 0 20px;
 			background-color: #2f3e51;
+			&__link {
+				color: $color-white;
+			}
 			.group {
-				padding: 20px 0;
+				margin: 20px 0 40px;
 				&__name {
 					font-size: 15px;
 				}
