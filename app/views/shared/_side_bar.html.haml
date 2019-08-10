@@ -14,4 +14,4 @@
 			= link_to group_messages_path(group), class: "chat-groups__link" do
 				.group
 					%p.group__name= group.name
-					%p.group__lastmessage メッセージはまだありません
+					%p.group__lastmessage= group.show_last_message
