@@ -15,7 +15,10 @@
 					.message__title
 						%p.message__title__username= message.user.name
 						%p.message__title__timestamp= message.created_at.strftime("%Y/%m/%d(%a) %H:%M:%S")
-					%p.message__text= message.text
+					- if message.text?
+						%p.message__text= message.text
+					- else
+						= image_tag message.image, class: "message__image"
 		= form_for [@group, Message.new], html: {class: "input-form"} do |f|
 			= f.text_field :text, placeholder: "type a message", class: "input-form__input-area"
 			= f.label :image, class: "input-form__fileselect-label", for: "fileselect" do
