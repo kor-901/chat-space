@@ -5,7 +5,10 @@ class MessagesController < ApplicationController
 	end
 
 	def create
-		Message.create(message_params)
+		message = Message.new(message_params)
+		if message.save
+		else
+		end
 	end
 
 	private
