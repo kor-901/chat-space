@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 	before_action :set_group
 
 	def index
-		@messages = @group.messages.includes(:user)
+		@messages = @group.messages.includes(:user).order("created_at")
 	end
 
 	def create
