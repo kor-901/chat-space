@@ -11,7 +11,7 @@
 			= link_to "Edit", "" , class: "header__edit"
 		.messages
 			= render @messages
-		= form_for [@group, Message.new], html: {class: "input-form"} do |f|
+		= form_for [@group, @message], html: {class: "input-form"} do |f|
 			= f.text_field :text, placeholder: "type a message", class: "input-form__input-area"
 			= f.label :image, class: "input-form__fileselect-label", for: "fileselect" do
 				%i.far.fa-image.fa-lg
