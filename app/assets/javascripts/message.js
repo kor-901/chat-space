@@ -1,6 +1,16 @@
 $(function() {
 	$('.input-form').on('submit', function(e){
 		e.preventDefault();
-		console.log(this);
+		var formData = new FormData(this);
+		var url = $('.input-form').attr('action');
+
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: formData,
+			dataType: 'json',
+			processData: false,
+			contentType: false
+		});
 	}) 
 });
