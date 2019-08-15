@@ -69,7 +69,7 @@ $(function() {
 			$('.input-form__send-button').prop('disabled', false);
 		})
 		.fail(function(){
-			alert('Something wrong occurred.');
+			alert('通信に失敗しました');
 		});
 		isSending = false;
 	}) 
