@@ -13,6 +13,11 @@ $(function() {
 		return html;
 	};
 
+	function buildImageHTML(imageUrl) {
+		var html = `	<img class="message__image" src="${imageUrl}">`;
+		return html;
+	};
+
 	function buildEndHTML() {
 		var html = '</div>';
 		return html;
@@ -35,7 +40,10 @@ $(function() {
 			var htmlArray = new Array(buildStartHTML(data));
 			if (data.text !== "") {
 				htmlArray.push(buildTextHTML(data.text));
-			}
+			};
+			if (data.image.url !== null) {
+				htmlArray.push(buildImageHTML(data.image.url));
+			};
 			htmlArray.push(buildEndHTML());
 			var html = htmlArray.join('\n');
 			$('.messages').append(html);
