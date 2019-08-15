@@ -56,6 +56,7 @@ $(function() {
 			$('.messages').append(html);
 			$('.input-form__input-area').val('');
 			$('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow', 'swing');
+			$('.input-form__send-button').prop('disabled', false);
 		})
 		.fail(function(){
 			alert('Something wrong occurred.');
