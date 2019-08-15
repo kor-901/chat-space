@@ -1,3 +1,6 @@
+// 処理中フラグ
+var isSending = false;
+
 $(function() {
 	function buildStartHTML(data) {
 		var html = `<div class="message">
@@ -26,11 +29,18 @@ $(function() {
 	$('.input-form').on('submit', function(e){
 		e.preventDefault();
 
+		if (isSending === true) {
+			alert("処理中です");
+			return;
+		};
+		
 		// フォーム未入力チェック
 		if ($('#message_text').val() === "" && $('#fileselect').val() === "") {
 			alert("メッセージを入力してください");
 			return false;
-		}
+		};
+		
+		isSending = true;
 
 		var formData = new FormData(this);
 		var url = $('.input-form').attr('action');
@@ -61,5 +71,6 @@ $(function() {
 		.fail(function(){
 			alert('Something wrong occurred.');
 		});
+		isSending = false;
 	}) 
 });
