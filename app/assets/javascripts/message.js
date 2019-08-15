@@ -25,6 +25,13 @@ $(function() {
 
 	$('.input-form').on('submit', function(e){
 		e.preventDefault();
+		
+		// フォーム未入力チェック
+		if ($('#message_text').val() === "" && $('#fileselect').val() === "") {
+			alert("メッセージを入力してください");
+			return false;
+		}
+
 		var formData = new FormData(this);
 		var url = $('.input-form').attr('action');
 
