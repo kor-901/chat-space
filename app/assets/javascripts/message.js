@@ -25,7 +25,7 @@ $(function() {
 
 	$('.input-form').on('submit', function(e){
 		e.preventDefault();
-		
+
 		// フォーム未入力チェック
 		if ($('#message_text').val() === "" && $('#fileselect').val() === "") {
 			alert("メッセージを入力してください");
@@ -58,7 +58,7 @@ $(function() {
 			$('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow', 'swing');
 		})
 		.fail(function(){
-
+			alert('Something wrong occurred.');
 		});
 	}) 
 });
