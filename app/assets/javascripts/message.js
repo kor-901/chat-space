@@ -47,6 +47,7 @@ $(function() {
 			htmlArray.push(buildEndHTML());
 			var html = htmlArray.join('\n');
 			$('.messages').append(html);
+			$('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow', 'swing');
 		})
 		.fail(function(){
 
