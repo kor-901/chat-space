@@ -4,5 +4,5 @@
 		%p.message__title__timestamp= message.created_at.strftime("%Y/%m/%d(%a) %H:%M:%S")
 	- if message.text?
 		%p.message__text= message.text
-	- else
+	- if message.image?
 		= image_tag message.image, class: "message__image"
