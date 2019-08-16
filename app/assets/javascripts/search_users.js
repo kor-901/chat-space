@@ -52,8 +52,8 @@ $(function() {
 		$(this).parent().remove();
 
 		// チャットメンバーに追加
-		var addUserId = $(this).attr('data-user-id');
-		var addUserName = $(this).attr('data-user-name');
+		var addUserId = $(this).data('user-id');
+		var addUserName = $(this).data('user-name');
 		appendChatMember(addUserId, addUserName);
 	});
 
