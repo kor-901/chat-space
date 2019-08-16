@@ -39,6 +39,7 @@ $(function() {
 
 	// 追加ボタンクリック
 	$(document).on('click', ".chat-group-user__btn--add", function() {
-		
+		//検索結果から削除
+		$(this).parent().remove();
 	});
 });
