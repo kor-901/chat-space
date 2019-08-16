@@ -10,6 +10,12 @@ $(function() {
 	$('#user-search-field').on('keyup', function(){
 		var input = $('#user-search-field').val();
 
+		// 検索テキスト未入力の場合
+		if (input === "") {
+			$('#user-search-result').empty();
+			return;
+		}
+
 		$.ajax({
 			type: 'GET',
 			url: '/users',
