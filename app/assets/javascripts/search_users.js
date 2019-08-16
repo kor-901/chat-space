@@ -56,4 +56,9 @@ $(function() {
 		var addUserName = $(this).attr('data-user-name');
 		appendChatMember(addUserId, addUserName);
 	});
+
+	// 削除ボタンクリック
+	$(document).on('click', ".chat-group-user__btn--remove", function() {
+		$(this).parent().remove();
+	});
 });
