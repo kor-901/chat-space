@@ -7,6 +7,7 @@ $(function() {
 		$('#user-search-result').append(html);
 	};
 
+	// 検索テキストフィールド入力
 	$('#user-search-field').on('keyup', function(){
 		var input = $('#user-search-field').val();
 
@@ -25,7 +26,7 @@ $(function() {
 		.done(function(users){
 			$('#user-search-result').empty();
 			
-			if (users.length !==0) {
+			if (users.length !== 0) {
 				users.forEach(function(user) {
 					appendSearchResult(user);
 				});
@@ -34,5 +35,10 @@ $(function() {
 		.fail(function(){
 			alert('ユーザー検索に失敗しました');
 		});
+	});
+
+	// 追加ボタンクリック
+	$(document).on('click', ".chat-group-user__btn--add", function() {
+		
 	});
 });
