@@ -82,7 +82,7 @@ $(function() {
 
     $.ajax({
       type: 'GET',
-      url: '/api/messages',
+      url: 'api/messages',
       dataTypd: 'json',
       data: {id: last_message_id}
     })
