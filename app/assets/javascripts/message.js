@@ -26,6 +26,7 @@ $(function() {
     return html;
   };
 
+  // メッセージ送信の非同期通信
   $('.input-form').on('submit', function(e){
     e.preventDefault();
 
@@ -72,5 +73,11 @@ $(function() {
       alert('通信に失敗しました');
     });
     isSending = false;
-  }) 
+  })
+
+  // 画面の自動更新
+  var reloadMessages = function() {
+    // ブラウザに表示されている最新メッセージのidを取得
+    last_message_id = $('.message').last().data('message-id');
+  };
 });
