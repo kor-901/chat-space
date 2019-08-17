@@ -108,4 +108,5 @@ $(function() {
       console.log('error');
     });
   };
+  setInterval(reloadMessages, 5000);
 });
