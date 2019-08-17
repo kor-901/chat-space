@@ -102,6 +102,7 @@ $(function() {
         });
         insertHTML = insertHTMLArray.join('\n');
         $('.messages').append(insertHTML);
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow', 'swing');
       };
     })
     .fail(function() {
