@@ -86,8 +86,23 @@ $(function() {
       dataTypd: 'json',
       data: {id: last_message_id}
     })
-    .done(function(message) {
-      console.log('success');
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        var insertHTMLArray = new Array();
+        messages.forEach(function(message) {
+          var htmlArray = new Array(buildStartHTML(message));
+          if (message.text !== "") {
+            htmlArray.push(buildTextHTML(message.text));
+          };
+          if (message.image.url !== null) {
+            htmlArray.push(buildImageHTML(message.image.url));
+          };
+          htmlArray.push(buildEndHTML());
+          insertHTMLArray.push(htmlArray.join('\n'));
+        });
+        insertHTML = insertHTMLArray.join('\n');
+        $('.messages').append(insertHTML);
+      };
     })
     .fail(function() {
       console.log('error');
