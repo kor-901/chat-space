@@ -3,7 +3,7 @@ var isSending = false;
 
 $(function() {
   function buildStartHTML(data) {
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${data.id}">
                   <div class="message__title">
                     <p class="message__title__username">${data.user_name}</p>
                     <p class="message__title__timestamp">${data.created_at}</p>
