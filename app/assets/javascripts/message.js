@@ -79,5 +79,18 @@ $(function() {
   var reloadMessages = function() {
     // ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.message').last().data('message-id');
+
+    $.ajax({
+      type: 'GET',
+      url: '/api/messages',
+      dataTypd: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(message) {
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    });
   };
 });
