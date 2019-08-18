@@ -39,21 +39,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
-  # Haml導入
-  gem "haml-rails"
-
-  # devise導入
-  gem 'devise'
-
-  # デバッグツール
-  gem 'pry-rails'
-
-  # CarrierWave導入
-  gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
-
-  # MiniMagick導入
-  gem "mini_magick"
-
   # テスト関連gem導入
   gem 'rspec-rails'
   gem 'factory_bot_rails'
@@ -77,3 +62,17 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+  # Haml導入
+  gem "haml-rails"
+
+  # devise導入
+  gem 'devise'
+
+  # デバッグツール
+  gem 'pry-rails'
+
+  # CarrierWave導入
+  gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+
+  # MiniMagick導入
+  gem "mini_magick"
