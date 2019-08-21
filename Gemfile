@@ -82,3 +82,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   # MiniMagick導入
   gem "mini_magick"
+
+  # fog導入 
+  gem 'fog-aws'
