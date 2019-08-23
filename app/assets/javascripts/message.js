@@ -66,6 +66,7 @@ $(function() {
       var html = htmlArray.join('\n');
       $('.messages').append(html);
       $('.input-form__input-area').val('');
+      $('.input-form__fileselect-original').val('');
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow', 'swing');
       $('.input-form__send-button').prop('disabled', false);
     })
